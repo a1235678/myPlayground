@@ -17,12 +17,10 @@ print(sum1)
 //====2.計算奇數行數字的總合====
 var sum2 = 0
 
-for i in 0...7{
-    if i % 2 == 1{
+for i in 0...7 where i % 2 == 1 {
     for j in 0...7{
         sum2 = sum2 + i * j
         }
-    }
 }
 print(sum2)
 
@@ -30,10 +28,8 @@ print(sum2)
 var sum3 = 0
 
 for i in 0...7{
-    for j in 0...7{
-        if j < i{
+    for j in 0...7 where j < i {
             sum3 = sum3 + i * j
-        }
     }
 }
 print(sum3)
@@ -45,10 +41,8 @@ print(sum3)
 func showNumber(min: Int, max: Int, number: Int) -> Int{
     var sum = 0
     
-    for i in min...max{
-        if i % number == 0{
+    for i in min...max where i % number == 0{
            sum = sum + i
-        }
     }
     return sum
 }
@@ -63,11 +57,11 @@ var sum4 = showNumber(min: 3, max: 98, number: 5)
  var sum = 0
  
  for i in min...max{
- if i % number != 0{
- sum = sum + i
- }
- }
- return sum
+    if i % number != 0{
+        sum = sum + i
+        }
+    }
+    return sum
  }
  
  var sum5 = showNotNumber(min: 3, max: 11, number: 5)
